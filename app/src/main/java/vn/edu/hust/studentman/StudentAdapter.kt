@@ -56,7 +56,7 @@ class StudentAdapter(
     }
 
     AlertDialog.Builder(activity)
-      .setTitle("Sửa sinh viên")
+      .setTitle("Sửa thông tin sinh viên")
       .setView(dialogView)
       .setPositiveButton("Lưu") { _, _ ->
         // Cập nhật trực tiếp vào danh sách sinh viên
@@ -85,6 +85,7 @@ class StudentAdapter(
             students.add(position, removedStudent)
             notifyItemInserted(position)
           }
+          .setDuration(30000)
           .show()
       }
       .setNegativeButton("Hủy", null)
